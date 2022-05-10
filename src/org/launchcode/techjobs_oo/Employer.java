@@ -3,20 +3,26 @@ package org.launchcode.techjobs_oo;
 import java.util.Objects;
 
 public class Employer {
+    // List of field(s) / Instance variable(s)
+    // Primitive data type(s)
     private int id;
     private static int nextId = 1;
+
+    // Object data type
     private String value;
 
+    // Constructor(s)
     public Employer() {
         id = nextId;
         nextId++;
     }
 
     public Employer(String value) {
-        this();
-        this.value = value;
+        this(); // <- Calls the constructor above
+        this.value = this.value;
     }
 
+    // Methods
     // Custom toString, equals, and hashCode methods:
 
     @Override

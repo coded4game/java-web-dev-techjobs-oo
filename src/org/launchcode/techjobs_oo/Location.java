@@ -3,19 +3,32 @@ package org.launchcode.techjobs_oo;
 import java.util.Objects;
 
 public class Location {
+
+    // List of field(s) / Instance variable(s)
+    // Primitive data type(s)
     private int id;
     private static int nextId = 1;
+
+    // Object data type(s)
     private String value;
 
+    // Constructor(s)
     public Location() {
         id = nextId;
         nextId++;
     }
 
+
     // TODO: Add a constructor that takes a string as a parameter and assigns it to the 'value' field. The
     //  constructor should also call the empty constructor in order to initialize the 'id' field.
 
+    public Location(String value) {
+        this();
+        this.value = value;
+    }
 
+
+    // Methods
     // Custom toString, equals, and hashCode methods:
 
     @Override
