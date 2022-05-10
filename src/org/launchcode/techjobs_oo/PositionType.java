@@ -19,7 +19,7 @@ public class PositionType {
     }
 
     public PositionType(String value) {
-        this();
+        this(); // <- Calls the empty constructor above
         this.value = value;
     }
 

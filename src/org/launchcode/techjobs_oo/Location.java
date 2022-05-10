@@ -23,7 +23,7 @@ public class Location {
     //  constructor should also call the empty constructor in order to initialize the 'id' field.
 
     public Location(String value) {
-        this();
+        this(); // <- Calls the empty constructor above
         this.value = value;
     }
 

@@ -33,7 +33,7 @@ public class Job {
             PositionType positionType,
             CoreCompetency coreCompetency
     ) {
-        this();
+        this(); // <- Calls the empty constructor above
         this.name = name;
         this.employer = employer;
         this.location = location;

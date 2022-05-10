@@ -19,7 +19,7 @@ public class CoreCompetency {
     }
 
     public CoreCompetency(String value) {
-        this();
+        this(); // <- Calls the empty constructor above
         this.value = value;
     }
 

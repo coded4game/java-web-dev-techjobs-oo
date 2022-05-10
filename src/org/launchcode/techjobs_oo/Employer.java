@@ -18,7 +18,7 @@ public class Employer {
     }
 
     public Employer(String value) {
-        this(); // <- Calls the constructor above
+        this(); // <- Calls the empty constructor above
         this.value = this.value;
     }
 
