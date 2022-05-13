@@ -48,6 +48,48 @@ public class Job {
     //  match.
 
     @Override
+    public String toString() {
+
+        // create a toString method that passes the first test.
+        // Since the test only checks if the returned string starts
+        // and ends with a blank line, make that happen.
+        String labelsAndFields = "" + "\n" +
+                "ID: " + this.getId() + "\n";
+
+        if (this.getName().equals("")) {
+            labelsAndFields += "Name: " + "Data not available\n";
+        } else {
+            labelsAndFields += "Name: " + this.getName() + "\n";
+        }
+
+        if (this.getEmployer().equals(null) || this.employer.getValue().equals("")) {
+            labelsAndFields += "Employer: " + "Data not available\n";
+        } else {
+            labelsAndFields += "Employer: " + this.getEmployer() + "\n";
+        }
+
+        if (this.getLocation().equals(null) || this.location.getValue().equals("")) {
+            labelsAndFields += "Location: " + "Data not available\n";
+        } else {
+            labelsAndFields += "Location: " + this.getLocation() + "\n";
+        }
+
+        if (this.getPositionType().equals(null) || this.positionType.getValue().equals("")) {
+            labelsAndFields += "Position Type: " + "Data not available\n";
+        } else {
+            labelsAndFields += "Position Type: " +this.getPositionType() + "\n";
+        }
+
+        if (this.getCoreCompetency().equals(null) || this.coreCompetency.getValue().equals("")) {
+            labelsAndFields += "Core Competency: " + "Data not available\n";
+        } else {
+            labelsAndFields += "Core Competency: " + this.getCoreCompetency() + "\n";
+        }
+
+        return labelsAndFields;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Job)) return false;

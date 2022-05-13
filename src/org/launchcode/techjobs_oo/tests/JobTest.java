@@ -16,6 +16,10 @@ public class JobTest {
     Location location;
     PositionType positionType;
     CoreCompetency coreCompetency;
+    Integer difference;
+    String output;
+    String toStringFirstTestOne;
+    String toStringFirstTestTwo;
 
     @Before
     public void createJobObj() {
@@ -63,7 +67,7 @@ public class JobTest {
         assertTrue(test_job1.getId() != test_job2.getId());
 
         test_job2.getId();
-        Integer difference = test_job1.getId() - test_job2.getId();
+        difference = test_job1.getId() - test_job2.getId();
         assertTrue(difference == -1);
     }
 
@@ -86,14 +90,15 @@ public class JobTest {
 
     @Test
     public void testJobToStringNewlines() {
-        String output = test_job3.toString();
+        output = test_job3.toString();
         assertTrue(output.startsWith("\n"));
         assertTrue(output.endsWith("\n"));
     }
 
+    // Created First Test for toString
     @Test
-    public void testFirstToString() {
-        String toStringFirstTest = "" + "\n" +
+    public void testFirstToStringOne() {
+        toStringFirstTestOne = "" + "\n" +
                 "ID: " + test_job3.getId() + "\n" +
                 "Name: " + test_job3.getName() + "\n" +
                 "Employer: " + test_job3.getEmployer() + "\n" +
@@ -101,12 +106,14 @@ public class JobTest {
                 "Position Type: " + test_job3.getPositionType() + "\n" +
                 "Core Competency: " + test_job3.getCoreCompetency() + "\n" +
                 "";
-        assertEquals(toStringFirstTest, test_job3.toString());
+
+        assertEquals(toStringFirstTestOne, test_job3.toString());
+        ;
     }
 
     @Test
-    public void testSecondToString() {
-        String toStringSecondTest = "" + "\n" +
+    public void testFirstToStringTwo() {
+        toStringFirstTestTwo = "" + "\n" +
                 "ID: " + test_job4.getId() + "\n" +
                 "Name: " + "Data not available" + "\n" +
                 "Employer: " + "Data not available" + "\n" +
@@ -114,6 +121,6 @@ public class JobTest {
                 "Position Type: " + "Data not available" + "\n" +
                 "Core Competency: " + "Data not available" + "\n" +
                 "";
-        assertEquals(toStringSecondTest, test_job4.toString());
+        assertEquals(toStringFirstTestTwo, test_job4.toString());
     }
 }
